@@ -4,81 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Claudio Junior — Software Developer especializado em Python, Cloud, IA e Power Platform.">
     <link rel="stylesheet" href="styles.css">
-    <title>Claudio Junior | Portfólio</title>
+    <title>Claudio Junior | Software Developer — Python, Cloud & AI</title>
 </head>
 
 <body>
+    <a href="#inicio" class="pular-conteudo">Pular para o conteúdo</a>
     <div class="particulas"></div>
+    <canvas id="fundoParticulas" class="fundo-particulas" aria-hidden="true"></canvas>
 
+    <header class="navegacao">
+        <div class="navegacao-caixa">
+            <a href="#inicio" class="navegacao-marca"><span class="navegacao-marca-prompt">~/</span>claudio-junior</a>
 
-    <nav class="navegacao">
-        <ul class="menu">
-            <li>
-                <a href="#inicio" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#contatos" class="menu-link">Contato</a>
-            </li>
-        </ul>
-    </nav>
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menuPrincipal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-    <main id="inicio" class="cabecalho">
-        <div>
-            <img src="./img/eu.png" alt="Foto de Claudio Junior" class="foto-perfil">
-            <h1>Claudio Junior</h1>
-            <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
+            <nav aria-label="Navegação principal">
+                <ul class="menu" id="menuPrincipal">
+                    <li><a href="#inicio" class="menu-link">Início</a></li>
+                    <li><a href="#sobre" class="menu-link">Sobre</a></li>
+                    <li><a href="#skills" class="menu-link">Skills</a></li>
+                    <li><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li><a href="#experiencia" class="menu-link">Experiência</a></li>
+                    <li><a href="#formacao" class="menu-link">Formação</a></li>
+                    <li><a href="#curriculo" class="menu-link">Currículo</a></li>
+                    <li><a href="#contatos" class="menu-link">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </main>
+    </header>
 
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-caixa">
-            <p class="sobre-paragrafo">
-                Olá, sou apaixonado por desenvolvimento e tecnologia desde a infância, o que me levou a explorar programação por conta própria e criar pequenos projetos. Tenho uma breve experiência como freelancer em design gráfico e infraestrutura de TI, que complementam minha visão técnica e criativa. Busco constantemente aprender, evoluir e contribuir com soluções inovadoras em ambientes colaborativos.<br>
-                Minhas linguagens de programação são: Python, Java, PHP, JavaScript, HTML, CSS e SQL.<br>
-                Estou buscando novas oportunidades no mercado de trabalho.
+    <main>
+        <section id="inicio" class="cabecalho">
+            <div class="foto-perfil-anel">
+                <img src="./img/eu.png" alt="Foto de Claudio Junior" class="foto-perfil">
+            </div>
+            <p class="hero-eyebrow"><span class="prompt" aria-hidden="true">$</span> whoami</p>
+            <h1>Claudio Carvalho Santana Junior</h1>
+            <p class="cabecalho-sub-titulo">
+                <span class="sr-only">Software Developer | Python | Cloud | AI | Power Platform</span>
+                <span class="typewriter" id="typewriter" aria-hidden="true"></span>
             </p>
-        </div>
-    </section>
 
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-caixa">
+            <div class="cabecalho-acoes">
+                <a href="#skills" class="botao botao-primario">Ver Skills</a>
+                <a href="#projetos" class="botao botao-secundario">Ver Projetos</a>
+            </div>
+        </section>
 
-            <div class="projetos-card">
-                <img src="./img/script.png" alt="Projeto 1" class="projetos-imagem">
-                <div class="caixa-texto-projetos">
-                    <h3 class="info-projetos">Sistema de escola em Python</h3>
-                    <p class="paragrafo-projetos">Um sistema completo de gestão escolar desenvolvido em Python, com funcionalidades para estudantes, professores e horários.</p>
+        <section id="sobre" class="secao sobre" aria-labelledby="sobre-titulo">
+            <h2 class="secao-titulo" id="sobre-titulo"><span class="secao-numero" aria-hidden="true">01.</span> Sobre Mim</h2>
+            <div class="cartao sobre-caixa">
+                <p class="sobre-paragrafo">
+                    Desenvolvedor de Software com experiência há 2 anos em desenvolvimento de soluções utilizando Python, JavaScript, SQL e serviços em nuvem (Azure, AWS e Google Cloud). Atuação em automações, integrações via APIs, bancos de dados, Power Platform, Power BI, Power Automate e Microsoft Copilot Studio para construção de agentes baseados em IA Generativa e LLMs. Experiência em ambientes Microsoft 365, DevOps, suporte a aplicações corporativas e desenvolvimento de soluções voltadas à produtividade empresarial.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="secao skills" aria-labelledby="skills-titulo">
+            <h2 class="secao-titulo" id="skills-titulo"><span class="secao-numero" aria-hidden="true">02.</span> Skills</h2>
+            <div class="skills-grade">
+                <div class="cartao skills-card">
+                    <h3 class="skills-card-titulo">Linguagens &amp; Dev</h3>
+                    <ul class="tags" aria-label="Linguagens e desenvolvimento">
+                        <li class="tag">Python</li>
+                        <li class="tag">JavaScript</li>
+                        <li class="tag">SQL</li>
+                        <li class="tag">Git</li>
+                        <li class="tag">APIs REST</li>
+                    </ul>
+                </div>
+
+                <div class="cartao skills-card">
+                    <h3 class="skills-card-titulo">Cloud &amp; DevOps</h3>
+                    <ul class="tags" aria-label="Cloud e DevOps">
+                        <li class="tag">Azure</li>
+                        <li class="tag">AWS</li>
+                        <li class="tag">GCP</li>
+                        <li class="tag">DevOps</li>
+                    </ul>
+                </div>
+
+                <div class="cartao skills-card">
+                    <h3 class="skills-card-titulo">Dados &amp; IA</h3>
+                    <ul class="tags" aria-label="Dados e Inteligência Artificial">
+                        <li class="tag">Power BI</li>
+                        <li class="tag">LLMs</li>
+                        <li class="tag">IA Generativa</li>
+                    </ul>
+                </div>
+
+                <div class="cartao skills-card">
+                    <h3 class="skills-card-titulo">Power Platform &amp; M365</h3>
+                    <ul class="tags" aria-label="Power Platform e Microsoft 365">
+                        <li class="tag">Power Platform</li>
+                        <li class="tag">Power Automate</li>
+                        <li class="tag">Copilot Studio</li>
+                        <li class="tag">Microsoft 365</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-        </div> 
-    </section>
+        <section id="projetos" class="secao projetos" aria-labelledby="projetos-titulo">
+            <h2 class="secao-titulo" id="projetos-titulo"><span class="secao-numero" aria-hidden="true">03.</span> Projetos</h2>
+            <div class="cartao projetos-placeholder">
+                <p>Novos projetos serão publicados em breve. Enquanto isso, confira meus repositórios no GitHub.</p>
+                <a href="https://github.com/claudiojuniordev" class="botao botao-secundario" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </div>
+            <div class="projetos-grade" id="projetosGrade">
+                <!-- Futuros projetos serão adicionados aqui -->
+            </div>
+        </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
-        
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
+        <section id="experiencia" class="secao experiencia" aria-labelledby="experiencia-titulo">
+            <h2 class="secao-titulo" id="experiencia-titulo"><span class="secao-numero" aria-hidden="true">04.</span> Experiência</h2>
+            <div class="cartao experiencia-card">
+                <div class="experiencia-cabecalho">
+                    <h3>Solo Network — Analista de Suporte | Dados &amp; IA</h3>
+                </div>
+
+                <ul class="tags" aria-label="Tecnologias utilizadas">
+                    <li class="tag">Azure</li>
+                    <li class="tag">Microsoft 365</li>
+                    <li class="tag">SQL Server</li>
+                    <li class="tag">Power BI</li>
+                    <li class="tag">Power Platform</li>
+                    <li class="tag">Power Automate</li>
+                    <li class="tag">Microsoft Copilot Studio</li>
+                    <li class="tag">APIs</li>
+                    <li class="tag">Python</li>
+                    <li class="tag">DevOps</li>
+                    <li class="tag">IA Generativa</li>
+                </ul>
+
+                <ul class="experiencia-lista">
+                    <li>Suporte técnico Nível 1 e Nível 2 para soluções Microsoft voltadas a Dados, IA, Cloud e DevOps.</li>
+                    <li>Atendimento e análise de incidentes relacionados ao Microsoft 365, Azure e Power Platform.</li>
+                    <li>Configuração, monitoramento e suporte de soluções utilizando Power BI, Power Automate e Microsoft Copilot Studio.</li>
+                    <li>Apoio na administração e consultas em SQL Server.</li>
+                    <li>Suporte em integrações entre aplicações, APIs e serviços Microsoft.</li>
+                    <li>Identificação e resolução de problemas técnicos.</li>
+                    <li>Colaboração na implementação de melhorias e automações.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="formacao" class="secao formacao" aria-labelledby="formacao-titulo">
+            <h2 class="secao-titulo" id="formacao-titulo"><span class="secao-numero" aria-hidden="true">05.</span> Formação &amp; Certificações</h2>
+            <div class="formacao-grade">
+                <div class="cartao">
+                    <h3 class="formacao-card-titulo">Formação Acadêmica</h3>
+                    <p>PUCPR — Tecnólogo em Gestão de Tecnologia da Informação</p>
+                </div>
+
+                <div class="cartao">
+                    <h3 class="formacao-card-titulo">Certificações &amp; Cursos</h3>
+                    <ul class="tags" aria-label="Certificações e cursos">
+                        <li class="tag">Python</li>
+                        <li class="tag">Git e GitHub</li>
+                        <li class="tag">VMware Cloud Foundation</li>
+                        <li class="tag">Microsoft 365</li>
+                        <li class="tag">IA Generativa</li>
+                        <li class="tag">Bootcamp Python</li>
+                    </ul>
+                </div>
+
+                <div class="cartao">
+                    <h3 class="formacao-card-titulo">Idiomas</h3>
+                    <ul class="tags" aria-label="Idiomas">
+                        <li class="tag">Inglês — A2</li>
+                        <li class="tag">Espanhol — A2</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculo" class="secao curriculo" aria-labelledby="curriculo-titulo">
+            <h2 class="secao-titulo" id="curriculo-titulo"><span class="secao-numero" aria-hidden="true">06.</span> Currículo</h2>
+            <div class="cartao curriculo-caixa">
+                <p>Quer todos os detalhes da minha trajetória profissional em um único documento?</p>
+                <a href="docs/Claudio_Junior_Curriculo.pdf" class="botao botao-primario" download>Baixar Currículo (PDF)</a>
             </div>
 
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem"></textarea>
+            <div class="cartao curriculo-visualizador">
+                <object data="docs/Claudio_Junior_Curriculo.pdf" type="application/pdf" class="curriculo-pdf" aria-label="Visualização do currículo em PDF">
+                    <p>
+                        Não foi possível exibir a visualização do PDF neste navegador.
+                        <a href="docs/Claudio_Junior_Curriculo.pdf" download>Baixe o currículo aqui</a>.
+                    </p>
+                </object>
             </div>
+        </section>
 
-            <button type="submit" class="botao-form">Enviar Whatsapp</button>
-        </form>
-    
-    </section>
+        <section id="contatos" class="secao contatos" aria-labelledby="contatos-titulo">
+            <h2 class="secao-titulo" id="contatos-titulo"><span class="secao-numero" aria-hidden="true">07.</span> Entre em Contato</h2>
+
+            <ul class="contatos-links" aria-label="Formas diretas de contato">
+                <li><a href="mailto:claudiojuniorofficial@gmail.com">claudiojuniorofficial@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/claudiocjr/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/claudiojuniordev" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="tel:+5541996236741">(41) 99623-6741</a></li>
+            </ul>
+
+            <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+                <div class="grupo-form">
+                    <label for="nome" class="rotulo-form">Nome</label>
+                    <input placeholder="Nome" class="campo-form" id="nome" name="nome" required>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="mensagem" class="rotulo-form">Mensagem</label>
+                    <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="5" id="mensagem" name="mensagem" required></textarea>
+                </div>
+
+                <button type="submit" class="botao botao-primario botao-largo">Enviar Whatsapp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; <span id="anoAtual"></span> Claudio Junior — Software Developer</p>
+        <ul class="rodape-links">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#skills" class="menu-link">Skills</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </footer>
 
     <script>
         function enviarWhats(event) {
@@ -96,6 +254,143 @@
             window.open(url, '_blank')
         }
 
+        const menuToggle = document.getElementById('menuToggle');
+        const menuPrincipal = document.getElementById('menuPrincipal');
+
+        menuToggle.addEventListener('click', () => {
+            const aberto = menuPrincipal.classList.toggle('menu-aberto');
+            menuToggle.setAttribute('aria-expanded', aberto);
+            menuToggle.classList.toggle('menu-toggle-ativo', aberto);
+        });
+
+        menuPrincipal.querySelectorAll('.menu-link').forEach((link) => {
+            link.addEventListener('click', () => {
+                menuPrincipal.classList.remove('menu-aberto');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('menu-toggle-ativo');
+            });
+        });
+
+        document.getElementById('anoAtual').textContent = new Date().getFullYear();
+
+        const secoes = document.querySelectorAll('main section[id]');
+        const linksNav = document.querySelectorAll('.menu-link');
+
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                if (!entrada.isIntersecting) return;
+
+                linksNav.forEach((link) => {
+                    link.classList.toggle('menu-link-ativo', link.getAttribute('href') === `#${entrada.target.id}`);
+                });
+            });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+
+        secoes.forEach((secao) => observador.observe(secao));
+
+        const prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const palavrasTypewriter = ['Software Developer', 'Python', 'Cloud', 'AI', 'Power Platform'];
+        const elementoTypewriter = document.getElementById('typewriter');
+
+        if (prefereMenosMovimento) {
+            elementoTypewriter.textContent = palavrasTypewriter.join(' | ');
+        } else {
+            let indicePalavra = 0;
+            let indiceLetra = 0;
+            let apagando = false;
+
+            function digitar() {
+                const palavraAtual = palavrasTypewriter[indicePalavra];
+
+                if (!apagando) {
+                    indiceLetra++;
+                    elementoTypewriter.textContent = palavraAtual.slice(0, indiceLetra);
+
+                    if (indiceLetra === palavraAtual.length) {
+                        apagando = true;
+                        setTimeout(digitar, 1500);
+                        return;
+                    }
+                } else {
+                    indiceLetra--;
+                    elementoTypewriter.textContent = palavraAtual.slice(0, indiceLetra);
+
+                    if (indiceLetra === 0) {
+                        apagando = false;
+                        indicePalavra = (indicePalavra + 1) % palavrasTypewriter.length;
+                    }
+                }
+
+                setTimeout(digitar, apagando ? 40 : 90);
+            }
+
+            digitar();
+        }
+
+        const canvasParticulas = document.getElementById('fundoParticulas');
+
+        if (canvasParticulas && !prefereMenosMovimento) {
+            const ctx = canvasParticulas.getContext('2d');
+            let largura, altura, particulas;
+
+            function redimensionar() {
+                largura = canvasParticulas.width = window.innerWidth;
+                altura = canvasParticulas.height = window.innerHeight;
+            }
+
+            function criarParticulas() {
+                const quantidade = Math.min(70, Math.floor((largura * altura) / 18000));
+                particulas = Array.from({ length: quantidade }, () => ({
+                    x: Math.random() * largura,
+                    y: Math.random() * altura,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                }));
+            }
+
+            function desenhar() {
+                ctx.clearRect(0, 0, largura, altura);
+
+                particulas.forEach((p, i) => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0 || p.x > largura) p.vx *= -1;
+                    if (p.y < 0 || p.y > altura) p.vy *= -1;
+
+                    ctx.fillStyle = 'rgba(34, 211, 238, 0.6)';
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, 1.5, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    for (let j = i + 1; j < particulas.length; j++) {
+                        const outra = particulas[j];
+                        const dist = Math.hypot(p.x - outra.x, p.y - outra.y);
+
+                        if (dist < 120) {
+                            ctx.strokeStyle = `rgba(79, 70, 229, ${1 - dist / 120})`;
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(outra.x, outra.y);
+                            ctx.stroke();
+                        }
+                    }
+                });
+
+                requestAnimationFrame(desenhar);
+            }
+
+            redimensionar();
+            criarParticulas();
+            desenhar();
+
+            window.addEventListener('resize', () => {
+                redimensionar();
+                criarParticulas();
+            });
+        }
     </script>
 
 </body>
